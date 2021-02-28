@@ -1,4 +1,5 @@
 # Discord-bot
+![alt text](untitled.gif)
 ## API link
 Giphy-https://developers.giphy.com/
 

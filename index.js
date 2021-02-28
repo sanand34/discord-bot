@@ -9,7 +9,7 @@ app.use((req, res, next) => {
 });
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const TOKEN = "ODE0Nzk1NjQ3MTk4NTYwMzEw.YDjDlA.IPCYXgfYI6_c_Ry-ZvXPKdYtI8A";
+const TOKEN = "getyourtoken";
 
 bot.login(TOKEN);
 

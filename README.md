@@ -11,5 +11,5 @@ $ npm install
 ## Usage
 
 ```js
-$ node wbot
+$ node index.js
 ```

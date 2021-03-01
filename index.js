@@ -24,14 +24,25 @@ bot.on("message", (msg) => {
   ) {
     msg.channel.send(`Sanchit is sus`);
   } else if (msg.content.startsWith("!")) {
-    let search = /[a-z]+/g.exec(msg.content);
+    let search = /[a-z\ ]+/g.exec(msg.content);
     async function fetchData(search) {
       const request = await axios.get(
         `https://api.giphy.com/v1/gifs/search?api_key=${"getapikey"}&q=${search}&limit=25&offset=0&rating=g&lang=en
         `
       );
       msg.channel.send("Le", {
-        files: [request.data.data[0].images.downsized_medium.url],
+        files: [request.data.data[0]?.images.downsized_medium.url],
+      });
+    }
+    fetchData(search[0]);
+  } else if (msg.content.startsWith("&")) {
+    let search = /[a-z\ ]+/g.exec(msg.content);
+    async function fetchData(search) {
+      const request = await axios.get(
+        `https://api.giphy.com/v1/stickers/search?api_key=${"getapikey"}&q=${search}&limit=25&offset=0&rating=g&lang=en`
+      );
+      msg.channel.send("Le", {
+        files: [request.data.data[0]?.images.downsized_medium.url],
       });
     }
     fetchData(search[0]);

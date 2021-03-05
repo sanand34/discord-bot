@@ -52,4 +52,4 @@ app.get("/", function (req, res) {
   res.send("hello world");
 });
 
-app.listen(port, () => console.log(`Listening on localhost:${port}`));
+app.listen(port, () => console.log(`Listening on port:${port}`));

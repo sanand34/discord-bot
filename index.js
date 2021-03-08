@@ -15,6 +15,7 @@ bot.login(TOKEN);
 
 bot.on("ready", () => {
   console.info(`Logged in as ${bot.user.tag}!`);
+  bot.user.setActivity("Created By Sanchit Anand");
 });
 
 bot.on("message", (msg) => {
